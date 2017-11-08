@@ -1,9 +1,44 @@
 <!--pages/Superman/index.wxml-->
+<!--头部  -->
+<view class='top-img'>
+  <image src='{{imgUrl}}'></image>
+</view>
+<!--类型  搜索 新建组  -->
+<view class='screen-box'>
+  <!--类型  -->
+  <view class='screen-left'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='screen-left-text'>
+        {{array[index]}}
+      </view>
+      <view>
+        <image src='../../image/icon-bottom.png'></image>
+      </view>
+
+    </picker>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <view>
   <scroll-view scroll-y="true" style="height: 200rpx;">
     <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}">
-        key:{{index}}---item{{item}}
+      key:{{index}}---item{{item}}
     </view>
   </scroll-view>
 </view>
-<navigator url="../Login/index"  open-type="navigate">跳转到首页</navigator>
+<navigator url="../Login/index" open-type="navigate">跳转到首页</navigator>
