@@ -39,4 +39,5 @@
   height: 16rpx;
   vertical-align: middle;
   margin-left: 10rpx;
+  margin-bottom: 5rpx;
 }
