@@ -1,0 +1,11 @@
+<!--pages/News/index.wxml-->
+<view >
+  <swiper indicator-dots="true" autoplay="true">
+    <block wx:for="{{swiperObj}}">
+      <swiper-item>
+        <image class='swiperimage' src="{{item.imgUrls}}" />
+        <text class='swipertext'>{{item.swipertex}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

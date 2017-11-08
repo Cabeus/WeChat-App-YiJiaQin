@@ -1,0 +1,2 @@
+<!--pages/Login/index.wxml-->
+<navigator url="../Superman/index" open-type="switchTab">跳转到首页</navigator>

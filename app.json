@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/Superman/index",
+    "pages/News/index", 
+    "pages/Message/index",
+    "pages/My/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/News/Details/Details",
+    "pages/News/Details/AllReviews/AllReviews",
+    "pages/Login/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E84651",
+    "navigationBarTitleText": "长安一家亲",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#E84651",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/News/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/Superman/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "能人榜"
+      },
+      {
+        "pagePath": "pages/Message/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/My/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}

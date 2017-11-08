@@ -1,0 +1,13 @@
+/* pages/News/index.wxss */
+image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  height: 180px;
+}
+.swipertext{
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
