@@ -1,0 +1,9 @@
+<!--pages/Superman/Personal/Personal.wxml-->
+<view class='header'>
+    <view class='header-img'>
+        <image  src='../../../image/tu.png'></image>
+    </view>
+    <view class='header-name'>
+        张三一<text>致富能人</text>
+    </view>
+</view>

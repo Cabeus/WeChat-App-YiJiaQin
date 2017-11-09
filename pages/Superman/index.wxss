@@ -1,43 +1,326 @@
 /* pages/Superman/index.wxss */
 
 .top-img {
-  width: 100%;
-  height: 300rpx;
+    width: 100%;
+    height: 300rpx;
 }
 
 .top-img image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .screen-box {
-  height: 80rpx;
-  padding: 0 3%;
-  line-height: 80rpx;
-  border-bottom: 1px solid #ccc;
+    height: 80rpx;
+    padding: 0 3%;
+    line-height: 80rpx;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 28rpx;
 }
 
 .screen-left {
-  width: 22%;
-  height: 100%;
+    width: 160rpx;
+    height: 100%;
+    float: left;
+    color: #333;
 }
 
 .screen-left picker {
-  width: 100%;
-  height: 100%;
-  font-size: 28rpx;
+    width: 100%;
+    height: 100%;
 }
 
 .screen-left picker .screen-left-text {
-  text-align: center;
-  width: 90rpx;
-  float: left;
+    text-align: center;
+    width: 100rpx;
+    float: left;
 }
 
 .screen-left picker image {
-  width: 26rpx;
-  height: 16rpx;
-  vertical-align: middle;
-  margin-left: 10rpx;
-  margin-bottom: 5rpx;
+    width: 26rpx;
+    height: 16rpx;
+    vertical-align: middle;
+    margin-left: 10rpx;
+    margin-bottom: 5rpx;
+}
+
+.screen-right {
+    width: 300rpx;
+    float: right;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+
+.screen-right image {
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align: middle;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    margin-bottom: 5rpx;
+}
+
+.nav-left {
+    width: 160rpx;
+    font-size: 28rpx;
+    height: calc(100vh - 382rpx);
+    background: #f5f5f5;
+    float: left;
+    color: #4a4a4a;
+}
+
+.nav-left-block {
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.nav-left-block view {
+    padding-left: 30rpx;
+}
+
+.nav-left-block .active {
+    background: #fff;
+    color: #e84651;
+    padding-left: 30rpx;
+}
+
+.nav-right {
+    width: calc(100vw - 160rpx);
+    font-size: 28rpx;
+    height: calc(100vh - 382rpx);
+    float: right;
+}
+
+.nav-right-block {
+    width: 100%;
+    height: 92rpx;
+    margin: 0 0 0 20rpx;
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #dedede;
+    display: flex;
+}
+
+.nav-right-block .Head-portrait {
+    width: 92rpx;
+    height: 92rpx;
+    position: relative;
+}
+
+.nav-right-block .Head-portrait .tab-typ {
+    position: absolute;
+    top: -5rpx;
+    left: -8rpx;
+    width: 44rpx;
+    height: 24rpx;
+    border-radius: 2rpx;
+    background: #f25e4b;
+    font-size: 16rpx;
+    line-height: 24rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.nav-right-block .Head-portrait image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rpx;
+}
+
+.nav-right-block .nav-right-cen {
+    flex: 1;
+    height: 100%;
+    padding-left: 22rpx;
+}
+
+.nav-right-block .nav-right-cen .top {
+    width: 100%;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.nav-right-block .nav-right-cen .bot {
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.nav-right-block .nav-right-cen .bot text {
+    margin-right: 20rpx;
+}
+
+.nav-right-block .nav-right-right {
+    display: flex;
+    width: 120rpx;
+    margin-right: 30rpx;
+}
+
+.nav-right-block .nav-right-right view {
+    margin: auto;
+    text-align: center;
+    width: 92rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+    font-size: 26rpx;
+    color: #03adef;
+    padding: 0;
+    border: 2rpx solid #03adef;
+    background: #fff;
+    border-radius: 4rpx;
+    list-style: none;
+}
+
+.nav-right-block-men .gerenxinxi {
+    width: 100%;
+    height: 92rpx;
+    margin: 0 0 0 20rpx;
+    padding: 20rpx 0;
+    display: flex;
+}
+
+.nav-right-block-men .gerenxinxi .Head-portrait {
+    width: 92rpx;
+    height: 92rpx;
+    position: relative;
+}
+
+.nav-right-block-men .gerenxinxi .Head-portrait image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rpx;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen {
+    flex: 1;
+    height: 100%;
+    padding-left: 22rpx;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .top {
+    width: 100%;
+    line-height: 42rpx;
+    height: 42rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .top text {
+    width: 56rpx;
+    height: 28rpx;
+    border-radius: 2px;
+    padding: 0 10rpx;
+    font-size: 22rpx;
+    margin-left: 10rpx;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .top text.tab-type-jingji {
+    border: 2rpx solid #f25e4b;
+    color: #f25e4b;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .top text.tab-type-jishu {
+    border: 2rpx solid #1e93ff;
+    color: #1e93ff;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .bot {
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-cen .bot text {
+    width: 350rpx;
+    display: block;
+    height: 40rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-right {
+    display: flex;
+    width: 80rpx;
+    margin-right: 30rpx;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-right view {
+    width: 10rpx;
+    height: 18rpx;
+    display: flex;
+    margin: auto;
+}
+
+.nav-right-block-men .gerenxinxi .nav-right-right view image {
+    width: 100%;
+    height: 100%;
+}
+.nav-right-block-men .group{
+    width: 100%;
+    height: 70rpx;
+    margin: 0 0 0 20rpx;
+    padding: 20rpx 0;
+    display: flex;
+    background: #F5F5F5;
+    position: relative;
+
+}
+.nav-right-block-men .group .shangbiao{
+    position: absolute;
+    width: 28rpx;
+    height: 14rpx;
+    top: -10rpx;
+    left: 30rpx;
+    display: flex;
+    margin: auto;
+}
+.nav-right-block-men .group .shangbiao image{
+   width: 100%;
+   height: 100%;
+}
+
+.nav-right-block-men .group .Head-portrait {
+    width: 72rpx;
+    height: 72rpx;
+    margin-left: 20rpx;
+}
+
+.nav-right-block-men .group .Head-portrait image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rpx;
+}
+.nav-right-block-men .group .cen{
+    display: flex;
+    flex: 1;
+    padding-left: 22rpx;
+}
+.nav-right-block-men .group .cen text{
+    margin: auto 0;
+    font-size: 28rpx;
+color: #333333;
+}
+.nav-right-block-men .group .right {
+    display: flex;
+    width: 120rpx;
+    margin-right: 30rpx;
+}
+
+.nav-right-block-men .group .right view {
+    margin: auto;
+    text-align: center;
+    width: 92rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+    font-size: 26rpx;
+    color: #03adef;
+    padding: 0;
+    border: 2rpx solid #03adef;
+    border-radius: 4rpx;
+    list-style: none;
 }

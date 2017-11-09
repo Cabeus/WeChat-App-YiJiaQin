@@ -1,44 +1,125 @@
 <!--pages/Superman/index.wxml-->
 <!--头部  -->
 <view class='top-img'>
-  <image src='{{imgUrl}}'></image>
+    <image src='{{imgUrl}}'></image>
 </view>
 <!--类型  搜索 新建组  -->
 <view class='screen-box'>
-  <!--类型  -->
-  <view class='screen-left'>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class='screen-left-text'>
-        {{array[index]}}
-      </view>
-      <view>
-        <image src='../../image/icon-bottom.png'></image>
-      </view>
-
-    </picker>
-  </view>
-</view>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <view>
-  <scroll-view scroll-y="true" style="height: 200rpx;">
-    <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}">
-      key:{{index}}---item{{item}}
+    <!--类型  -->
+    <view class='screen-left'>
+        <picker bindchange="bindPickerChange" value="{{typeIndex}}" range="{{typeArray}}">
+            <view class='screen-left-text'>
+                {{typeArray[typeIndex]}}
+            </view>
+            <view>
+                <image src='../../image/icon-bottom.png'></image>
+            </view>
+        </picker>
     </view>
-  </scroll-view>
+    <view class='screen-right'>
+        <view>
+            <image src='../../image/icon-screen.png'></image>
+            <text>搜索</text>
+        </view>
+        <view>
+            <image src='../../image/icon-add.png'></image>
+            <text>我要建组</text>
+        </view>
+    </view>
 </view>
-<navigator url="../Login/index" open-type="navigate">跳转到首页</navigator> -->
+
+<view class='nav-left'>
+    <scroll-view scroll-y="true" style="height: 100%;">
+        <view class='nav-left-block' wx:for="{{categories}}">
+            <view class='active' wx:if="{{index==navLeftActive}}">
+                {{item.name}}
+            </view>
+            <view bindtap='navLeftclick' wx:if="{{index!=navLeftActive}}" data-index='{{index}}'>
+                {{item.name}}
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<view class='nav-right'>
+    <scroll-view scroll-y="true" style="height: 100%;">
+        <!--自治组  -->
+        <view wx:if="{{typeIndex == 0}}">
+            <view class='nav-right-block' wx:for="{{categories[navLeftActive].groups}}">
+                <view class='Head-portrait'>
+                    <image src='{{item.imgUrl}}'></image>
+                    <view class='tab-typ' wx:if="{{item.tag!=''}}">{{item.tag}}</view>
+                </view>
+                <view class='nav-right-cen'>
+                    <view class='top'>
+                        {{item.name}}
+                    </view>
+                    <view class='bot'>
+                        <text>{{item.memberTotal}}成员</text>
+                        <text>{{item.postTotal}}帖子</text>
+                    </view>
+                </view>
+                <view class='nav-right-right'>
+                    <view>加入</view>
+                </view>
+            </view>
+        </view>
+
+        <!--能人  -->
+        <view wx:elif="{{typeIndex == 1}}">
+            <view class='nav-right-block-men' wx:for="{{categories[navLeftActive].persons}}">
+                <view class='gerenxinxi'>
+                    <view class='Head-portrait'>
+                        <image src='{{item.imgUrl}}'></image>
+                    </view>
+                    <view class='nav-right-cen'>
+                        <view class='top'>
+                            {{item.name}}
+                            <text class='tab-type-jingji' wx:for="{{item.tags}}" wx:if="{{item=='经济'}}">经济</text>
+                            <text class='tab-type-jishu' wx:for="{{item.tags}}" wx:if="{{item=='技术'}}">技术</text>
+                        </view>
+                        <view class='bot'>
+                            <text>{{item.title}}</text>
+                        </view>
+                    </view>
+                    <navigator url='Personal/Personal?id={{item.id}}' class='nav-right-right' hover-class="none">
+                        <view>
+                            <image src='../../image/icon-right.png'></image>
+                        </view>
+                    </navigator>
+                </view>
+                <view class='group'>
+                <view class='shangbiao'><image src='../../image/icon-shangbiao.png'></image></view>
+                    <view class='Head-portrait'>
+                        <image src='{{item.groups.imgUrl}}'></image>
+                    </view>
+                    <view class='cen'>
+                        <text>{{item.groups.name}}</text>
+                    </view>
+                    <view class='right'>
+                        <view>加入</view>
+                    </view>
+                </view>
+
+            </view>
+
+        </view>
+
+    </scroll-view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <navigator url="../Login/index" open-type="navigate">跳转到首页</navigator>   -->

@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "能人榜"
+  "navigationBarTitleText": "能人榜",
+  "disableScroll":true
 }
