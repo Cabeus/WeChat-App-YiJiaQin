@@ -21,7 +21,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -63,6 +63,18 @@
 					"id": -1,
 					"name": "能人  个人中心",
 					"pathName": "pages/Superman/Personal/Personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "能人-自治组",
+					"pathName": "pages/Superman/Group/group",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "能人-自治组-详情",
+					"pathName": "pages/Superman/Group/detail/detail",
 					"query": ""
 				}
 			]

@@ -16,7 +16,7 @@ var zizhizu = [
             {
                 "id": 1,   // 自治组主键ID
                 "name": "三季稻种植小组", // 名称
-                "imgUrl": "../../image/Superman-autonomous-group.png",
+                "imgUrl": "../../image/touxiang.png",
                 "memberTotal": 120,
                 "postTotal": 350,
                 "tag": ""   // 标签，可以为空串"" 
@@ -742,7 +742,8 @@ Page({
     data: {
         typeArray: ['自治组', '能人'],
         typeIndex: 0,  //自治组  能人类型 0自治组 1能人
-        imgUrl: '../../image/Superman-autonomous-group.png',//头部图片
+        imgUrl: '../../image/tu.png',//头部图片
+        imgUrl1: '../../image/touxiang.png',//头部图片
         categories: zizhizu,//  数据
         navLeftActive: 0, //初始化左侧选中值
 

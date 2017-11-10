@@ -4,13 +4,14 @@
     width: 100%;
     height: 262rpx;
     background: #e84651;
+        padding-top: 30rpx;
 }
 
 .header .header-img {
     width: 152rpx;
     height: 152rpx;
     margin: 0 auto;
-    border: 1rpx solid rgba(255, 255, 255,0.3 );
+    border: 1rpx solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     display: flex;
 }
@@ -21,18 +22,125 @@
     border-radius: 50%;
     margin: auto;
 }
-.header .header-name{
+
+.header .header-name {
     margin-top: 25rpx;
     text-align: center;
     font-size: 30rpx;
     color: #fff;
 }
-.header .header-name text{
+
+.header .header-name text {
     width: 108rpx;
     height: 34rpx;
     display: inline-block;
     font-size: 22rpx;
-    background: #C8121E;
+    background: #c8121e;
     border-radius: 100rpx;
     margin-left: 20rpx;
+}
+
+.title-row {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 4%;
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #f5f5f5;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.content-row {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20rpx 4%;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.group {
+    box-sizing: border-box;
+    width: 100%;
+    height: 132rpx;
+    padding: 20rpx  0 20rpx 4%;
+    border-bottom: 1rpx solid #dedede;
+    display: flex;
+}
+
+.group .Head-portrait {
+    width: 92rpx;
+    height: 92rpx;
+    position: relative;
+}
+
+.group .Head-portrait .tab-typ {
+    position: absolute;
+    top: -5rpx;
+    left: -8rpx;
+    width: 44rpx;
+    height: 24rpx;
+    border-radius: 2rpx;
+    background: #f25e4b;
+    font-size: 16rpx;
+    line-height: 24rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.group .Head-portrait image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rpx;
+}
+
+.group .group-cen {
+    box-sizing: border-box;
+    flex: 1;
+    height: 100%;
+    padding-left: 22rpx;
+}
+
+.group .group-cen .top {
+    width: 100%;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.group .group-cen .bot {
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #999;
+    width: 100%;
+}
+.group .group-cen .bot text{
+    width: 380rpx;
+    display: block;
+    height: 40rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.group .group-right {
+    box-sizing: border-box;
+    display: flex;
+    width: 150rpx;
+    padding-right: 30rpx;
+}
+
+.group .group-right view {
+    margin: auto;
+    text-align: center;
+    width: 92rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+    font-size: 26rpx;
+    color: #03adef;
+    padding: 0;
+    border: 2rpx solid #03adef;
+    background: #fff;
+    border-radius: 4rpx;
 }

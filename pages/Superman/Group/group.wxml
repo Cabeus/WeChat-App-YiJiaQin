@@ -1,0 +1,198 @@
+<!--pages/Superman/Group/group.wxml-->
+<!--hader  -->
+<view class='header'>
+    <view class='header-touxiang'>
+        <image src='../../../image/touxiang.png'></image>
+    </view>
+    <view class='header-cen'>
+        <view class='top'>
+            <text>心理咨询室</text>
+            <navigator url='detail/detail?id={{item.id}}' class='nav-right-right' hover-class="none">
+                <view class='icon-right'>
+                    <image src='../../../image/icon-right-fff.png'></image>
+                </view>
+            </navigator>
+        </view>
+        <view class='bot'>
+            <text>兴趣交流类</text>
+        </view>
+
+    </view>
+    <view class='header-QR'>
+        we
+    </view>
+</view>
+<!--nav  -->
+<view class='nav-box'>
+    <view class='nav'>
+        <block wx:for="{{navlist}}">
+            <view class='nav-cen' style='color:#333;' bindtap='navlist' data-index='{{index}}' wx:if="{{navindex==index}}">{{item}}
+                <view class='active'></view>
+            </view>
+            <view class='nav-cen' bindtap='navlist' data-index='{{index}}' wx:else>{{item}}</view>
+        </block>
+    </view>
+</view>
+<!--nav 顶部  -->
+<view class='nav-box nav-top' wx:if="{{scrollTop>86}}">
+    <view class='nav'>
+        <block wx:for="{{navlist}}">
+            <view class='nav-cen' style='color:#333;' bindtap='navlist' data-index='{{index}}' wx:if="{{navindex==index}}">{{item}}
+                <view class='active'></view>
+            </view>
+            <view class='nav-cen' bindtap='navlist' data-index='{{index}}' wx:else>{{item}}</view>
+        </block>
+    </view>
+</view>
+<!--帖子  -->
+<view class='post-page' wx:if="{{navindex==0}}">
+    <view class='sticky'>
+        <view class='sticky-icon'>置顶</view>
+        <text>绿洲街北社区光明道小区4楼103</text>
+    </view>
+    <view class='hr' style='margin:0 10rpx;'></view>
+    <view class='sticky'>
+        <view class='sticky-icon'>置顶</view>
+        <text>绿洲街北社区光明道小区4楼103</text>
+    </view>
+    <view style='height:20rpx;background:#f5f5f5;'></view>
+    <view class='list'>
+        <view class='list-con'>
+            <view class='list-con-top'>
+                <view class='Head-icon'>
+                    <image src='../../../image/tu.png'></image>
+                </view>
+                <view class='top-cen'>
+                    <view class='top'>
+                        心理咨询室
+                    </view>
+                    <view class='bot'>
+                        <text>5分钟前</text>
+                    </view>
+                </view>
+            </view>
+            <view class='list-con-cen'>
+                <view class='text'>有效完善现有综治维稳管理手段，显著提高“一感两度两率”。遇险情一键发起求助，相关联保人员迅速响应；更加入物联网设计。</view>
+                <view class='image-box'>
+                    <!-- <view class='image'>
+                     <image mode='aspectFit' src='../../../../image/tu.png' bindtap='previewImage' data-src='../../../../image/tu.png'></image> 
+                </view> -->
+                    <view class='image'>
+                        <image mode='aspectFill' src='../../../image/tu.png'></image>
+                    </view>
+                </view>
+
+            </view>
+            <view class='list-con-bot'>
+
+                <view class='block'>
+                    <view class='icon-zambia'>
+                        <image src='../../../image/icon-Zambia.png'></image>
+                    </view>
+                    <text>456</text>
+                </view>
+                <view class='block'>
+                    <view class='icon-comment'>
+                        <image src='../../../image/icon-comment.png'></image>
+                    </view>
+                    <text>100</text>
+                </view>
+                <view class='block'>
+                    <view class='icon-see'>
+                        <image src='../../../image/icon-See.png'></image>
+                    </view>
+                    <text>123</text>
+                </view>
+
+            </view>
+
+        </view>
+        <view style='height:10rpx;background:#f5f5f5;'></view>
+
+    </view>
+    <view class='list'>
+        <view class='list-con'>
+            <view class='list-con-top'>
+                <view class='Head-icon'>
+                    <image src='../../../image/tu.png'></image>
+                </view>
+                <view class='top-cen'>
+                    <view class='top'>
+                        心理咨询室
+                    </view>
+                    <view class='bot'>
+                        <text>5分钟前</text>
+                    </view>
+                </view>
+            </view>
+            <view class='list-con-cen'>
+                <view class='text'>有效完善现有综治维稳管理手段，显著提高“一感两度两率”。遇险情一键发起求助，相关联保人员迅速响应；更加入物联网设计。</view>
+                <view class='image-box'>
+                    <!-- <view class='image'>
+                     <image mode='aspectFit' src='../../../../image/tu.png' bindtap='previewImage' data-src='../../../../image/tu.png'></image> 
+                </view> -->
+                    <view class='image'>
+                        <image mode='aspectFill' src='../../../image/tu.png'></image>
+                    </view>
+                </view>
+
+            </view>
+            <view class='list-con-bot'>
+                <view class='block'>
+                    <view class='icon-see'>
+                        <image src='../../../image/icon-See.png'></image>
+                    </view>
+                    <text>123</text>
+                </view>
+                <view class='block'>
+                    <view class='icon-comment'>
+                        <image src='../../../image/icon-comment.png'></image>
+                    </view>
+                    <text>123</text>
+                </view>
+                <view class='block'>
+                    <view class='icon-zambia'>
+                        <image src='../../../image/icon-Zambia.png'></image>
+                    </view>
+                    <text>123</text>
+                </view>
+
+            </view>
+
+        </view>
+        <view style='height:10rpx;background:#f5f5f5;'></view>
+
+    </view>
+
+</view>
+<!--帖子end  -->
+
+<!--活动  -->
+<view class='activity' wx:if="{{navindex==1}}">
+    活动
+
+
+
+
+</view>
+<!--活动end  -->
+
+<!--公告  -->
+<view class='notice' wx:if="{{navindex==2}}">
+    公告
+</view>
+<!--公告end  -->
+
+<!--问卷  -->
+<view class='wenjuan' wx:if="{{navindex==3}}">
+    问卷
+</view>
+<!--问卷end  -->
+
+<!--加入组  -->
+<view class='add-box'>
+    <view class='add'>加入组</view>
+</view>
+<view style='height:98rpx;'>
+
+</view>

@@ -9,7 +9,9 @@
         "pages/News/Details/Details",
         "pages/News/Details/AllReviews/AllReviews",
         "pages/Login/index",
-        "pages/Superman/Personal/Personal"
+        "pages/Superman/Personal/Personal",
+        "pages/Superman/Group/group",
+        "pages/Superman/Group/detail/detail"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,9 +1,59 @@
 <!--pages/Superman/Personal/Personal.wxml-->
 <view class='header'>
     <view class='header-img'>
-        <image  src='../../../image/tu.png'></image>
+        <image src='../../../image/tu.png'></image>
     </view>
     <view class='header-name'>
-        张三一<text>致富能人</text>
+        张三一
+        <text>致富能人</text>
+    </view>
+</view>
+<view class='title-row'>
+    <text>简介</text>
+</view>
+<view class='content-row'>
+    <text>国家二级心理咨询师，唯塔心灵学院创始人，美国纽约塔罗学院认证塔罗师</text>
+</view>
+<view class='title-row'>
+    <text>地址</text>
+</view>
+<view class='content-row'>
+    <text>绿洲街北社区光明道小区4楼103</text>
+</view>
+<view class='title-row'>
+    <text>Ta的自治组</text>
+</view>
+<view class='group' >
+    <view class='Head-portrait'>
+        <image src='../../../image/tu.png'></image>
+        <view class='tab-typ'>经济</view>
+    </view>
+    <view class='group-cen'>
+        <view class='top'>
+            心理咨询室
+        </view>
+        <view class='bot'>
+            <text>群简介群简介群简介群简介...</text>
+        </view>
+    </view>
+    <view class='group-right'>
+        <view>加入</view>
+    </view>
+</view>
+<view class='group' >
+    <view class='Head-portrait'>
+        <image src='../../../image/tu.png'></image>
+        <view class='tab-typ'>经济</view>
+    </view>
+    <view class='group-cen'>
+        <view class='top'>
+            心理咨询室
+        </view>
+        <view class='bot'>
+            <text>群简介群简介群简介群简介.群简介群简介群简介群简介</text>
+        </view>
+    </view>
+    <view class='group-right'>
+        <view>加入</view>
     </view>
 </view>

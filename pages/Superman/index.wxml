@@ -1,7 +1,10 @@
 <!--pages/Superman/index.wxml-->
 <!--头部  -->
-<view class='top-img'>
+<view class='top-img'  wx:if="{{typeIndex == 0}}">
     <image src='{{imgUrl}}'></image>
+</view>
+<view class='top-img' wx:if="{{typeIndex == 1}}">
+    <image src='{{imgUrl1}}'></image>
 </view>
 <!--类型  搜索 新建组  -->
 <view class='screen-box'>
@@ -44,61 +47,69 @@
     <scroll-view scroll-y="true" style="height: 100%;">
         <!--自治组  -->
         <view wx:if="{{typeIndex == 0}}">
-            <view class='nav-right-block' wx:for="{{categories[navLeftActive].groups}}">
-                <view class='Head-portrait'>
-                    <image src='{{item.imgUrl}}'></image>
-                    <view class='tab-typ' wx:if="{{item.tag!=''}}">{{item.tag}}</view>
-                </view>
-                <view class='nav-right-cen'>
-                    <view class='top'>
-                        {{item.name}}
+            <navigator url='Group/group?id={{item.id}}' hover-class="none">
+                <view class='nav-right-block' wx:for="{{categories[navLeftActive].groups}}">
+                    <view class='Head-portrait'>
+                        <image src='{{item.imgUrl}}'></image>
+                        <view class='tab-typ' wx:if="{{item.tag!=''}}">{{item.tag}}</view>
                     </view>
-                    <view class='bot'>
-                        <text>{{item.memberTotal}}成员</text>
-                        <text>{{item.postTotal}}帖子</text>
+                    <view class='nav-right-cen'>
+                        <view class='top'>
+                            {{item.name}}
+                        </view>
+                        <view class='bot'>
+                            <text>{{item.memberTotal}}成员</text>
+                            <text>{{item.postTotal}}帖子</text>
+                        </view>
+                    </view>
+                    <view class='nav-right-right'>
+                        <view>加入</view>
                     </view>
                 </view>
-                <view class='nav-right-right'>
-                    <view>加入</view>
-                </view>
-            </view>
+            </navigator>
         </view>
 
         <!--能人  -->
         <view wx:elif="{{typeIndex == 1}}">
             <view class='nav-right-block-men' wx:for="{{categories[navLeftActive].persons}}">
-                <view class='gerenxinxi'>
-                    <view class='Head-portrait'>
-                        <image src='{{item.imgUrl}}'></image>
-                    </view>
-                    <view class='nav-right-cen'>
-                        <view class='top'>
-                            {{item.name}}
-                            <text class='tab-type-jingji' wx:for="{{item.tags}}" wx:if="{{item=='经济'}}">经济</text>
-                            <text class='tab-type-jishu' wx:for="{{item.tags}}" wx:if="{{item=='技术'}}">技术</text>
+                <navigator url='Personal/Personal?id={{item.id}}' hover-class="none">
+                    <view class='gerenxinxi'>
+                        <view class='Head-portrait'>
+                            <image src='{{item.imgUrl}}'></image>
                         </view>
-                        <view class='bot'>
-                            <text>{{item.title}}</text>
+                        <view class='nav-right-cen'>
+                            <view class='top'>
+                                {{item.name}}
+                                <text class='tab-type-jingji' wx:for="{{item.tags}}" wx:if="{{item=='经济'}}">经济</text>
+                                <text class='tab-type-jishu' wx:for="{{item.tags}}" wx:if="{{item=='技术'}}">技术</text>
+                            </view>
+                            <view class='bot'>
+                                <text>{{item.title}}</text>
+                            </view>
+                        </view>
+                        <view class='nav-right-right'>
+                            <view>
+                                <image src='../../image/icon-right.png'></image>
+                            </view>
                         </view>
                     </view>
-                    <navigator url='Personal/Personal?id={{item.id}}' class='nav-right-right' hover-class="none">
-                        <view>
-                            <image src='../../image/icon-right.png'></image>
+                </navigator>
+                <navigator url='Group/group?id={{item.id}}' hover-class="none">
+                    <view class='group'>
+                        <view class='shangbiao'>
+                            <image src='../../image/icon-shangbiao.png'></image>
                         </view>
-                    </navigator>
-                </view>
-                <view class='group'>
-                <view class='shangbiao'><image src='../../image/icon-shangbiao.png'></image></view>
-                    <view class='Head-portrait'>
-                        <image src='{{item.groups.imgUrl}}'></image>
+                        <view class='Head-portrait'>
+                            <image src='{{item.groups.imgUrl}}'></image>
+                        </view>
+                        <view class='cen'>
+                            <text>{{item.groups.name}}</text>
+                        </view>
+                        <view class='right'>
+                            <view>加入</view>
+                        </view>
                     </view>
-                    <view class='cen'>
-                        <text>{{item.groups.name}}</text>
-                    </view>
-                    <view class='right'>
-                        <view>加入</view>
-                    </view>
-                </view>
+                </navigator>
 
             </view>
 
