@@ -80,14 +80,14 @@ Page({
     //   },
     navlist: function (e) {
 
-        console.log(e.currentTarget.dataset.index)
+        // console.log(e.currentTarget.dataset.index)
         this.setData({
             navindex: e.currentTarget.dataset.index
         })
-        console.log(this.data.navindex)
+        // console.log(this.data.navindex)
     },
     onPageScroll: function (e) {
-        console.log(e.scrollTop);
+        // console.log(e.scrollTop);
         this.setData({
             scrollTop: e.scrollTop
         })
